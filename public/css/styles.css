@@ -1,0 +1,135 @@
+/*Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+body {
+    font-family: 'Roboto';
+    font-size: 12px;
+    background-color: #ebebeb;
+}
+
+main {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+footer {
+    padding-top: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 30px;
+}
+
+footer section i{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.mainHeader {
+    background-color: #EAC926;
+    color: #666;
+    padding: 10px;
+}
+
+.mainHeader__subtitle {
+    text-align: center;
+}
+
+.mainHeader__magnifying-glass {
+    padding: 3px;
+    border: solid 1px #666;
+    background-color: #ebebeb;
+}
+
+.navbar {
+    display: none;
+}
+
+.burger-menu__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto;
+}
+
+.burger-menu__icon {
+    border: 0.6rem solid #1259c3;
+    border-radius: 20%;
+    background-color: #1259c3;
+    color: white;
+}
+
+.burger-menu__icon-link {
+    text-decoration: none;
+}
+
+.titleHeader {
+    font-size: 24px;
+    color: #666;
+}
+
+.card {
+    background-color: white;
+    margin: 0 auto 10px;
+}
+
+.card__box {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.card__ship-icon {
+    padding: 5px;
+    color: #39b54a;
+    border: solid 1px #39b54a;
+    border-radius: 20px;
+}
+
+.card__image {
+    width: 50%;
+    margin: 5% 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.card__price {
+    font-size: 18px;
+}
+
+.card__discount {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+.card__description {
+    font-size: 16px;
+    color: #666;
+    display: none;
+}
+
+@media (min-width: 361px) {
+    .navbar {
+        display: block;
+    }
+
+    .burger-menu__box {
+        display: none;
+    }
+
+    .card {
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+
+    .card__description {
+        display: block;
+    }
+}
