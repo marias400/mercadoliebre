@@ -6,10 +6,17 @@ Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;*/
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto';
     font-size: 12px;
     background-color: #ebebeb;
+    margin: 0;
 }
 
 main {
@@ -37,17 +44,36 @@ footer section i{
 .mainHeader {
     background-color: #EAC926;
     color: #666;
-    padding: 10px;
+    padding: 15px;
 }
 
-.mainHeader__subtitle {
-    text-align: center;
+.mainHeader__superior {
+    margin-bottom: 15px;
 }
 
-.mainHeader__magnifying-glass {
-    padding: 3px;
+.mainHeader__superior-logo {
+    display: inline;
+    width: 50%;
+}
+
+.mainHeader__superior-search-bar {
+    display: inline;
+    margin: 3% 0;
+    width: 50%;
+}
+
+.mainHeader__superior-magnifying-glass-box {
+    display: inline;
+    padding: 1.5px;
+    justify-content: center;
+    align-items: center;
     border: solid 1px #666;
     background-color: #ebebeb;
+}
+
+.mainHeader__superior-subtitle {
+    text-align: center;
+    margin: 15px 0;
 }
 
 .navbar {
@@ -58,7 +84,6 @@ footer section i{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3% auto;
 }
 
 .burger-menu__icon {
@@ -73,6 +98,7 @@ footer section i{
 }
 
 .titleHeader {
+    margin: 5% 0;
     font-size: 24px;
     color: #666;
 }
@@ -82,18 +108,6 @@ footer section i{
     margin: 0 auto 10px;
 }
 
-.card__box {
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-}
-
-.card__ship-icon {
-    padding: 5px;
-    color: #39b54a;
-    border: solid 1px #39b54a;
-    border-radius: 20px;
-}
-
 .card__image {
     width: 50%;
     margin: 5% 25%;
@@ -101,24 +115,98 @@ footer section i{
     justify-content: center;
 }
 
-.card__price {
-    font-size: 18px;
+.card__box {
+    border-top: 1px solid #ebebeb;
+    padding: 20px;
+    position: relative;
 }
 
-.card__discount {
+.card__box-ship-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.card__box-first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card__box-first-row-price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.card__box-first-row-discount {
     font-size: 16px;
     color: #39b54a;
+    width: 70%;
+    text-align: center;
 }
 
-.card__description {
+.card__box-description {
+    margin-top: 1rem;
     font-size: 16px;
     color: #666;
     display: none;
 }
 
 @media (min-width: 361px) {
+    .mainHeader__superior {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .mainHeader__superior-logo {
+        width: 34%;
+        height: 100%;
+    }
+
+    .mainHeader__superior-search-bar {
+        width: 30%;
+        height: 33%;
+    }
+
+    .mainHeader__superior-magnifying-glass-box {
+        display: flex;
+        width: 3%;
+        height: 33%;
+    }
+
+    .mainHeader__superior-subtitle {
+        width: 33%;
+    }
+
     .navbar {
-        display: block;
+        margin: 4vw 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar div {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 35%;
+        text-align: center;
+    }
+
+    .navbar div a {
+        text-decoration: none;
+        color: #666;
     }
 
     .burger-menu__box {
@@ -127,9 +215,24 @@ footer section i{
 
     .card {
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        width: 40%;
     }
 
-    .card__description {
+    .card__box-description {
         display: block;
+    }
+
+    .baraja {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 3%;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .card {
+        width: 24%;
     }
 }
