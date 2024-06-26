@@ -9,6 +9,10 @@ app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`);
 });
 
-app.get("/", (req, res) => {
+app.get("views/home.html", (req, res) => {
     res.sendFile(path.resolve("views/home.html"));
+});
+
+app.get("views/register.html", (req, res) => {
+    res.sendFile(path.resolve("views/register.html"));
 });

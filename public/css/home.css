@@ -1,0 +1,182 @@
+/*Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+.titleHeader {
+    margin: 5% 0;
+    font-size: 24px;
+    color: #666;
+}
+
+.card {
+    background-color: white;
+    margin: 0 auto 10px;
+}
+
+.card:hover {
+    .card__box-description{visibility: visible;}
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+.card__image {
+    width: 50%;
+    margin: 5% 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.card__box {
+    border-top: 1px solid #ebebeb;
+    padding: 20px;
+    position: relative;
+}
+
+.card__box-ship-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 500ms;
+}
+
+.card__box-ship-icon:hover {
+    transform: rotateZ(-90deg);
+}
+
+.card__box--first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card__box--first-row-price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.card__box--first-row-discount {
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+    text-align: right;
+}
+
+.card__box-description {
+    margin-top: 1rem;
+    font-size: 16px;
+    color: #666;
+    visibility: hidden;
+}
+
+footer {
+    padding-top: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 30px;
+}
+
+footer section i{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 361px) {
+    .mainHeader__superior {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .mainHeader__superior-logo {
+        width: 34%;
+        height: 100%;
+    }
+
+    .mainHeader__superior-search-bar {
+        width: 30%;
+        height: 33%;
+    }
+
+    .mainHeader__superior-magnifying-glass-box {
+        display: flex;
+        width: 3%;
+        height: 33%;
+    }
+
+    .mainHeader__superior-subtitle {
+        width: 33%;
+    }
+
+    .navbar {
+        margin: 4vw 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar div {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 35%;
+        text-align: center;
+    }
+
+    .navbar div a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    .burger-menu__box {
+        display: none;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .baraja {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 3%;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .card {
+        width: 24%;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer section {
+        width: 30%;
+    }
+
+    footer section i:hover {
+        color: #EAC926;
+    }
+}
