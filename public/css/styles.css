@@ -2,13 +2,13 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 body {
     font-family: 'Roboto';
     font-size: 12px;
     background-color: #ebebeb;
-    margin: 0;
 }
 
 main {
@@ -17,64 +17,104 @@ main {
     margin: 0 auto;
 }
 
-.mainHeader {
+.main-header {
     background-color: #EAC926;
     color: #666;
-    padding: 15px;
+    padding: 8px;
 }
 
-.mainHeader__superior {
-    margin-bottom: 15px;
+.main-header__superior {
+    height: max-content;
 }
 
-.mainHeader__superior-logo {
-    display: inline;
-    width: 50%;
-}
-
-.mainHeader__superior-search-bar {
-    display: inline;
-    margin: 3% 0;
-    width: 50%;
-}
-
-.mainHeader__superior-magnifying-glass-box {
-    display: inline;
-    padding: 1.5px;
-    justify-content: center;
+.main-header__superior--top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    border: solid 1px #666;
-    background-color: #ebebeb;
 }
 
-.mainHeader__superior-subtitle {
+.main-header__superior--top-logo-link {
+    width: 50%;
+    padding: 3%;
+}
+
+.main-header__superior--top-logo {
+    width: 100%;
+    padding: 3%;
+}
+
+.main-header__superior--top-search-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-header__superior--top-search-box-bar {
+    width: 75%;
+    flex-grow: 1;
+    height: 25px;
+    border: none;
+    border-radius: 7px 0 0 7px;
+    font-size: 110%;
+    padding: 5px;
+}
+
+.main-header__superior--top-search-box-magnifying-glass {
+    height: 25px;
+    background-color: white;
+    font-size: 110%;
+    border-radius: 0 7px 7px 0;
+    padding: 6px 5px 4px 5px;
+}
+
+.main-header__superior--cuotas {
+    width: 100%;
     text-align: center;
-    margin: 15px 0;
+    margin: 8px 0 15px;
 }
 
 .navbar {
     display: none;
 }
 
-.burger-menu__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.burger-menu__icon {
+.main-header__burger-menu {
     border: 0.6rem solid #1259c3;
     border-radius: 20%;
     background-color: #1259c3;
     color: white;
+    cursor: pointer;
+    margin-left: 43%;
 }
 
-.burger-menu__icon-link {
-    text-decoration: none;
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 30px;
+}
+
+footer section i {
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 361px) {
-    .mainHeader__superior {
+    .main-header {
+        padding: 20px;
+    }
+
+    .main-header__superior {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -82,46 +122,71 @@ main {
         height: 10vh;
     }
 
-    .mainHeader__superior-logo {
-        width: 34%;
-        height: 100%;
+    .main-header__superior--top {
+        width: 67%;
+        justify-content: space-between;
     }
 
-    .mainHeader__superior-search-bar {
+
+    .main-header__superior--top-logo {
+        max-width: 400px;
+        max-height: 90px;
+        padding: 10px 0 10px 10px;
+        margin: 0 auto;
+    }
+
+    .main-header__superior--top-search-box {
+        margin-left: 5%;
+    }
+
+    .main-header__superior--cuotas {
         width: 30%;
-        height: 33%;
-    }
-
-    .mainHeader__superior-magnifying-glass-box {
-        display: flex;
-        width: 3%;
-        height: 33%;
-    }
-
-    .mainHeader__superior-subtitle {
-        width: 33%;
+        margin: 0;
     }
 
     .navbar {
-        margin: 4vw 0 0;
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
     }
 
     .navbar div {
+        width: 400px;
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        width: 35%;
-        text-align: center;
+        justify-content: center;
+    }
+
+    .navbar__right-side {
+        flex-direction: row-reverse;
     }
 
     .navbar div a {
         text-decoration: none;
         color: #666;
+        margin-left: 15px;
     }
 
-    .burger-menu__box {
+    .main-header__burger-menu-div {
         display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer section {
+        width: 30%;
+    }
+
+    footer section i {
+        transition: color 100ms;
+    }
+
+    footer section i:hover {
+        color: #EAC926;
     }
 }

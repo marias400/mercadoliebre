@@ -1,4 +1,105 @@
-main form input {
-    display: block;
-    margin-top: 20%;
+main {
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+}
+
+form {
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.negrita {
+    align-self: flex-start;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.invisible {
+    display: none;
+}
+
+form input:valid {
+    border: 2px green solid;
+}
+
+form input:invalid {
+    border: 2px red solid;
+}
+
+.name:valid ~ .name-valid,
+.user:valid ~ .user-valid,
+.email:valid ~ .email-valid,
+.birthdate:valid ~ .birthdate-valid,
+.address:valid ~ .address-valid,
+.password:valid ~ .password-valid,
+.confirm-password:valid ~  .confirm-password-valid {
+    position: relative;
+    font-size: 16px;
+    top: -23px;
+    right: -25px;
+    align-self: flex-end;
+    display: inline;
+    color: green;
+}
+
+.name:invalid ~ .name-error,
+.user:invalid ~ .user-error,
+.email:invalid ~ .email-error,
+.birthdate:invalid ~ .birthdate-error,
+.address:invalid ~ .address-error,
+.password:invalid ~ .password-error,
+.confirm-password:invalid ~  .confirm-password-error {
+    align-self: flex-start;
+    display: inline;
+    color: red;
+}
+
+.radio-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.radio-block input, .checkbox-block input {
+    margin: 0;
+    width: fit-content;
+}
+
+.checkbox-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-block label {
+    width: 90%;
+}
+
+form a {
+    width: 100%;
+}
+
+form button {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: #1259c3;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
 }
