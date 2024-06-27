@@ -1,0 +1,110 @@
+/*Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+
+.title-header {
+    margin: 5% 0;
+    font-size: 24px;
+    color: #666;
+}
+
+.card {
+    background-color: white;
+    margin: 0 auto 10px;
+    transition: box-shadow 300ms;
+}
+
+.card:hover {
+    .card__box-description {
+        color: #666;
+    }
+
+    ;
+    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+}
+
+.card__image {
+    width: 50%;
+    margin: 5% 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.card__box {
+    border-top: 1px solid #ebebeb;
+    padding: 20px;
+    position: relative;
+}
+
+.card__box-ship-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 500ms;
+}
+
+.card__box-ship-icon:hover {
+    transform: rotateZ(-90deg);
+}
+
+.card__box--first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card__box--first-row-price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.card__box--first-row-discount {
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+    text-align: right;
+}
+
+.card__box-description {
+    margin-top: 1rem;
+    font-size: 16px;
+    color: white
+        /*#666*/
+    ;
+    /*visibility: hidden;*/
+    transition: color 200ms;
+}
+
+@media (min-width: 361px) {
+    .card {
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .baraja {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 3%;
+    }
+}
+
+@media (min-width: 769px) {
+    .card {
+        width: 24%;
+        margin-right: 1%;
+    }
+}
