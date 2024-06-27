@@ -63,11 +63,15 @@ main {
     padding: 5px;
 }
 
+.main-header__superior--top-search-box-button {
+    border: none;
+    border-radius: 0 7px 7px 0;
+    background-color: white;
+}
+
 .main-header__superior--top-search-box-magnifying-glass {
     height: 25px;
-    background-color: white;
     font-size: 110%;
-    border-radius: 0 7px 7px 0;
     padding: 6px 5px 4px 5px;
 }
 

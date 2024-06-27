@@ -4,7 +4,7 @@ main {
     margin: 5vh auto;
 }
 
-form {
+main form {
     width: 350px;
     padding: 20px;
     display: flex;
@@ -13,7 +13,7 @@ form {
     align-items: center;
 }
 
-form input {
+main form input {
     width: 100%;
     border: none;
     padding: 5px;
@@ -32,11 +32,11 @@ form input {
     display: none;
 }
 
-form input:valid {
+main form input:valid {
     border: 2px green solid;
 }
 
-form input:invalid {
+main form input:invalid {
     border: 2px red solid;
 }
 
@@ -90,11 +90,11 @@ form input:invalid {
     width: 90%;
 }
 
-form a {
+main form a {
     width: 100%;
 }
 
-form button {
+main form button {
     width: 100%;
     border: none;
     color: white;
